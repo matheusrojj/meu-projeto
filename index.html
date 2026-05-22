@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Growth Tiger — Dashboard de Clientes</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      background: #0f0f0f;
+      color: #e0e0e0;
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: -0.5px;
+    }
+
+    header p {
+      color: #888;
+      margin-top: 6px;
+      font-size: 0.95rem;
+    }
+
+    .badge-assessoria {
+      display: inline-block;
+      background: #1a1a1a;
+      border: 1px solid #333;
+      color: #f59e0b;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 4px 12px;
+      border-radius: 99px;
+      margin-top: 12px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background: #1a1a1a;
+      border: 1px solid #2a2a2a;
+      border-radius: 12px;
+      padding: 24px;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+
+    .card:hover {
+      border-color: #444;
+      transform: translateY(-2px);
+    }
+
+    .card-icon {
+      font-size: 1.8rem;
+      margin-bottom: 14px;
+    }
+
+    .card h2 {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 4px;
+    }
+
+    .card .nicho {
+      font-size: 0.82rem;
+      color: #888;
+      margin-bottom: 14px;
+    }
+
+    .card .location {
+      font-size: 0.8rem;
+      color: #666;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .tag {
+      background: #252525;
+      border: 1px solid #333;
+      color: #aaa;
+      font-size: 0.72rem;
+      padding: 3px 10px;
+      border-radius: 99px;
+    }
+
+    .tag.active {
+      background: #14532d;
+      border-color: #166534;
+      color: #86efac;
+    }
+
+    .section-title {
+      text-align: center;
+      color: #666;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin: 48px 0 20px;
+      max-width: 1100px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .section-title span {
+      background: #0f0f0f;
+      padding: 0 12px;
+      position: relative;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 60px;
+      color: #444;
+      font-size: 0.8rem;
+    }
+
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #22c55e;
+      display: inline-block;
+      margin-right: 6px;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.4; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>⚡ Growth Tiger</h1>
+    <p>Dashboard interno de clientes ativos</p>
+    <span class="badge-assessoria">Marketing de Performance</span>
+  </header>
+
+  <p class="section-title"><span>Clientes Ativos</span></p>
+
+  <div class="grid">
+
+    <div class="card">
+      <div class="card-icon">⚖️</div>
+      <h2>Dra. Juliana</h2>
+      <div class="nicho">Direito Previdenciário</div>
+      <div class="location">📍 Linhares, ES</div>
+      <div class="tags">
+        <span class="tag active"><span class="dot"></span>Ativo</span>
+        <span class="tag">Servidores Públicos</span>
+        <span class="tag">Professores</span>
+        <span class="tag">Meta Ads</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-icon">👕</div>
+      <h2>OFFTAG</h2>
+      <div class="nicho">Moda Masculina Premium</div>
+      <div class="location">📍 Brasil</div>
+      <div class="tags">
+        <span class="tag active"><span class="dot"></span>Ativo</span>
+        <span class="tag">E-commerce</span>
+        <span class="tag">Anti-logo</span>
+        <span class="tag">Orgânico + Pago</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-icon">📦</div>
+      <h2>Fernando Brandão</h2>
+      <div class="nicho">Dropshipping / E-commerce</div>
+      <div class="location">📍 Novo Progresso, PA</div>
+      <div class="tags">
+        <span class="tag active"><span class="dot"></span>Ativo</span>
+        <span class="tag">Dropshipping</span>
+        <span class="tag">Produtos</span>
+        <span class="tag">Meta Ads</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-icon">🏛️</div>
+      <h2>Veredito</h2>
+      <div class="nicho">Marketing Jurídico</div>
+      <div class="location">📍 Brasil</div>
+      <div class="tags">
+        <span class="tag active"><span class="dot"></span>Ativo</span>
+        <span class="tag">Escritórios</span>
+        <span class="tag">Alto Ticket</span>
+        <span class="tag">Meta Ads</span>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    Gerado a partir do Cérebro Obsidian — Growth Tiger · maio/2026
+  </footer>
+
+</body>
+</html>
